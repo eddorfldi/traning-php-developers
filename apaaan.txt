@@ -1,0 +1,8 @@
+1. HTML5 & attribute
+2. DOM & Native Javascript ( cobe bikin kalkulator sederhana pake javascript )
+3. Mulai cobe migrasi ke Jquery
+4. Cobe mengolah data array dan JSON di  JQuery
+5. Baru cobe API Google maps ( cobe bikin simple marker dengan link ini )
+https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+Bise, pasti bise! FLYING GET!  
+They always support you, Do!Cari Hubunggan antara GIS dan GPS!
