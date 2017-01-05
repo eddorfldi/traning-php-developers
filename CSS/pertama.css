@@ -1,0 +1,57 @@
+h1{
+    color:white;
+    text-align: center;
+    background-color: orange;
+    margin: 0px;
+    text-transform: capitalize;
+}
+
+nav, ul, li{
+    display: inline;
+    text-align: center;
+    margin: 50px;
+    margin-left: 120px;
+}
+
+section{
+    column-count: 3;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid orange;
+}
+
+a{
+    color: orange;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+}
+
+p{
+    padding: 0px;
+    margin: 0px;
+}
+
+.satu{
+    border-right: 1px solid orange;
+    padding: 10px;
+    text-align: left;
+}
+
+.dua{
+    border-right: 1px solid orange;
+    padding: 10px;
+    text-align: center;
+}
+
+.tiga{
+    padding: 10px;
+    text-align: right;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: orange;
+    font-size: 20px;
+}
