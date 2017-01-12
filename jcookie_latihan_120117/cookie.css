@@ -1,0 +1,35 @@
+.center{
+padding-top: 20px;
+padding-left: 200px;
+padding-bottom: 350px;
+}
+.test{
+    margin: 50px 120px;
+    padding-right: 50px;
+}
+.table{
+margin-left: -180px;
+margin-top: 20px;
+background-color: grey;
+border: 10px solid white;
+color: black;
+}
+.kedua{
+    margin-left: 190px;
+}
+.row{
+    margin-left: -150px;
+    background-color: grey;
+    border: 10px solid white;
+    color: black;
+}
+body{
+    background-image: url(CAFE1.jpg);
+}
+
+.gambar{
+    width: 400px;
+    margin-left: 150px;
+    margin-bottom: -150px;
+    margin-top: -150px;
+}

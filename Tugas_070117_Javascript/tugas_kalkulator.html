@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tugas Kalkulator</title>
+    </head>
+    <body>
+        <input type="text" name="nama" value="" placeholder="" id="a"><br><br>
+        <input type="text" name="nama" value="" placeholder="" id="b"><br><br>
+        <script>
+        function tambah(a,b){
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = parseInt(a) + parseInt(b);
+                document.getElementById("hasil").innerHTML = c;
+        }
+        function kurang(a,b){
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = parseInt(a) - parseInt(b);
+                document.getElementById("hasil").innerHTML = c;
+        }
+        function kali(a,b){
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = parseInt(a) * parseInt(b);
+                document.getElementById("hasil").innerHTML = c;
+        }
+        function bagi(a,b){
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = parseInt(a) / parseInt(b);
+                document.getElementById("hasil").innerHTML = c;
+        }
+        </script>
+        <button type="button" class="btn btn-primary" onclick="tambah()">+</button>
+        <button type="button" class="btn btn-primary" onclick="kurang()">-</button>
+        <button type="button" class="btn btn-primary" onclick="kali()">x</button>
+        <button type="button" class="btn btn-primary" onclick="bagi()">/</button>
+        <p id="hasil"></p>
+    </body>
+</html>

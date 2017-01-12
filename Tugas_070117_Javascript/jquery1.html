@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery 1</title>
+    </head>
+    <body>
+        <h1 id="page">Saya lagi belajar JQuery</h1>
+        <button type="button" class="btn btn-primary" id="tombol_hide">Sembunyikan</button>
+        <button type="button" class="btn btn-primary" id="tombol_show">Tampilkan</button>
+        <button type="button" class="btn btn-primary" id="tombol_small">Perkecil</button>
+        <button type="button" class="btn btn-primary" id="tombol_red">Merahkan</button>
+        <button type="button" class="btn btn-primary" id="tombol_su">slide up</button>
+        <button type="button" class="btn btn-primary" id="tombol_sd">Slide down</button>
+    </body>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    var p = $('#page');
+    $('#tombol_hide').click(function(){
+    p.hide();
+    });
+    $('#tombol_show').click(function(){
+    p.show();
+    });
+    $('#tombol_small').click(function(){
+    p.css("font-size","20px");
+    });
+    $('#tombol_red').click(function(){
+    p.css("color","red");
+    });
+    $('#tombol_su').click(function(){
+    p.slideUp("slow");
+    });
+    $('#tombol_sd').click(function(){
+    p.slideDown("fast");
+    });
+    });
+    </script>
+</html>

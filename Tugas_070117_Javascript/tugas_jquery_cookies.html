@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas JQuery</title>
+    <style>
+    </style>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+
+    // $(document).ready(function() {
+    // var p = $('#pelanggan2','#paket1_2');
+    // $('#tombol_hapus').click(function(){
+    // p.delete;
+    // });
+    // });
+
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+       user = prompt("Masukkan nama pelayan:","");
+       if (user != "" && user != null) {
+           setCookie("username", user, 30);
+       }
+    }
+}
+
+function pelayan(){
+    var nama_pelayan = document.getElementById("pelayan").value;
+    console.log(nama_pelayan);
+    setCookie("pelayan1",nama_pelayan,1);
+    document.getElementById("pelayan2").innerHTML = getCookie("pelayan1");
+}
+
+function meja(){
+    var nama_meja = document.getElementById("meja").value;
+    console.log(nama_meja);
+    setCookie("meja1",nama_meja,1);
+    document.getElementById("meja2").innerHTML = getCookie("meja1");
+}
+
+function paket1(){
+    var nama_paket1 = document.getElementById("paket1").value;
+    console.log(nama_paket1);
+    setCookie("paket_1",nama_paket1,1);
+    document.getElementById("paket1_2").innerHTML = getCookie("paket_1");
+}
+
+function paket2(){
+    var nama_paket2 = document.getElementById("paket2").value;
+    console.log(nama_paket2);
+    setCookie("paket_2",nama_paket2,1);
+    document.getElementById("paket2_2").innerHTML = getCookie("paket_2");
+}
+
+function hapus_pelayan(){
+    setCookie("pelayan1","",0);
+    document.getElementById("pelayan2").innerHTML = getCookie("pelayan1");
+    document.getElementById("pelayan").value = "";
+}
+
+function hapus_meja(){
+    setCookie("meja1","",0);
+    document.getElementById("meja2").innerHTML = getCookie("meja1");
+    document.getElementById("meja").value="";
+}
+
+function hapus_paket(){
+    setCookie("paket_1","",0);
+    document.getElementById("paket1_2").innerHTML = getCookie("paket_1");
+    document.getElementById("paket1").value="";
+}
+
+function hapus_paket2(){
+    setCookie("paket_2","",0);
+    document.getElementById("paket2_2").innerHTML = getCookie("paket_2");
+    document.getElementById("paket2").value="";
+}
+
+</script>
+</head>
+<body>
+    <button onclick="checkCookie()">Ubah Pelayan</button>
+    <p>Nama pelayan : <input type="text" name="" value="" placeholder="" id="pelayan"></p>
+    <button type="button" onclick="pelayan()">Tambah</button>
+    <button type="button" onclick="hapus_pelayan()">Hapus</button>
+    <p>Meja : <input type="text" name="" value="" placeholder="" id="meja" style="margin-left: 60px"></p>
+    <button type="button" onclick="meja()">Tambah</button>
+    <button type="button" onclick="hapus_meja()">Hapus</button>
+    <p>Paket 1 :<input type="text" name="" value="" placeholder="" id="paket1" style="margin-left: 50px"></p><br>
+    <button type="button" onclick="paket1()">Tambah</button>
+    <button type="button" onclick="hapus_paket()">Hapus</button>
+    <p>Paket 2 :<input type="text" name="" value="" placeholder="" id="paket2" style="margin-left: 50px"></p><br>
+    <button type="button" onclick="paket2()">Tambah</button>
+    <button type="button" onclick="hapus_paket2()">Hapus</button>
+    <!--
+    <button type="button" class="btn btn-primary" id="tombol_hapus">Hapus</button> -->
+    <div><br>
+    <table border="5px">
+        <tr>
+            <thead>
+                <th colspan="2"> Tabel Pemesanan</th>
+            </thead>
+        </tr>
+        <tr>
+            <tbody>
+                <td>Nama Pelayan</td>
+                <td><p id="pelayan2"></p></td>
+            </tbody>
+            <tbody>
+                <td>Nomor Meja</td>
+                <td><p id="meja2"></p></td>
+            </tbody>
+            <tbody>
+                <td>Paket</td>
+                <td><p id="paket1_2"></p></td>
+            </tbody>
+            <tbody>
+                <td>Paket</td>
+                <td><p id="paket2_2"></p></td>
+            </tbody>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

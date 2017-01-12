@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas Javascript</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        p{
+            width: 673px;
+            height: 60px;
+            background-color: green;
+            position: relative;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            margin-left: 10px;
+        }
+        button{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="satu"> saya belajar javascript</p>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        function background(){
+        document.getElementById("satu").style.backgroundColor="red";
+        }
+        function fontsize(){
+        document.getElementById("satu").style.fontSize="40px";
+        }
+        function position(){
+        document.getElementById("satu").style.left="400px";
+        }
+        function fontfamily(){
+        document.getElementById("satu").style.fontFamily="arial";
+        }
+        function color(){
+        document.getElementById("satu").style.color="yellow";
+        }
+        function font(){
+        document.getElementById("satu").innerHTML="Ini tugas 070117."
+        }
+    </script>
+    <button type="button" class="btn btn-primary" onclick="background()">Ubah Background</button>
+    <button type="button" class="btn btn-primary" onclick="fontsize()">Ubah ukuran</button>
+    <button type="button" class="btn btn-primary" onclick="position()">Ubah Posisi</button>
+    <button type="button" class="btn btn-primary" onclick="fontfamily()">Ubah Font</button>
+    <button type="button" class="btn btn-primary" onclick="color()">Ubah Warna</button>
+    <button type="button" class="btn btn-primary" onclick="font()">Ubah Tulisan</button>
+</body>
+</html>

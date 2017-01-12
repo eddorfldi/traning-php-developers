@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery4</title>
+    <style type="text/css" media="screen">
+        p{
+            width: 300px;
+            height: 100px;
+            background-color: lime;
+        }
+        p.Tinggi{
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lagi belajar</h1>
+    <p id="hasil" class="rendah"></p>
+    <button type="" id="ubah">ubah</button>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#ubah").click(function() {
+                // $("p").css("width","500px");
+                // $("p").css("height","120px");
+                // $("p").css("background-color","yellow");
+            $('p').addClass('Tinggi');
+            });
+        });
+    </script>
+</body>
+
+</html>

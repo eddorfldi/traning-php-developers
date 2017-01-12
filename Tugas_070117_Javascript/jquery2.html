@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jquery 2</title>
+</head>
+<body>
+        <h1 id="page">Saya lagi belajar JQuery</h1>
+        <button type="button" class="btn btn-primary" id="tombol_app">Append</button>
+        <button type="button" class="btn btn-primary" id="tombol_pre">Prepend</button>
+    </body>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    $('#tombol_app').click(function(){
+    $("h1").append("JQuery is amazing...");
+    })
+    $('#tombol_pre').click(function(){
+    $("h1").prepend('<p>Learning JQuery...</p>')
+    })
+    })
+    </script>
+</html>

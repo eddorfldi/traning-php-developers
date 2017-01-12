@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookies1</title>
+</head>
+<body>
+<h3>Latihan simpan hapus cookie</h3>
+<input type="text" name="nama" value="" placeholder="nama" id="nama">
+<button type="button" class="btn btn-primary" id="btn">Simpan</button>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="">
+        $(document).ready(function() {
+            $('#btn').click(function(){
+                var nama=$('#nama').val();
+                $.cookie('nama',nama {expires: 7});
+                //var nama_cookie=$("#nama").attr
+            })
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jquery 3</title>
+</head>
+<body>
+    <h2>sayaaaaaa</h2>
+    <input type="text" id="test" name="JQuery" value="Belajar" placeholder="">
+    <p id="hasil"></p>
+    <p id="hasil2"></p>
+    <button type="button" class="btn btn-primary" id="tombol_attr">Attribute</button>
+    <button type="button" class="btn btn-primary" id="tombol_value">Value</button>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#tombol_attr').click(function(){
+                var ambil = $("input").attr("name");
+                $('#hasil').html(ambil);
+            });
+            $('#tombol_value').click(function(){
+                var ambil_value = $("input").val();
+                $('#hasil2').html(ambil_value);
+            });
+        });
+    </script>
+</body>
+</html>
